@@ -1,0 +1,47 @@
+<nav class="nav navbar-default navbar-fixed-top" role="navigation">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <button class="navbar-toggle collapsed" data-toggle="collapse" data-target="#menuCollapsed" aria-expanded="false">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a ui-sref="app" class="navbar-brand">Max Technology</a>
+        </div>
+        
+        <div class="collapse navbar-collapse" id="menuCollapsed">
+            <ul class="nav navbar-nav">
+                <li><a ui-sref="app"><i class="fa fa-home fa-xs"></i> Inicio</a></li>
+                <li><a ui-sref="app.about"><i class="fa fa-users fa-xs"></i> Nosotros</a></li>
+                <li class="dropdown">
+                    <a href="" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" role="button"><i class="fa fa-user" aria-hidden="true"></i> Categorías<aspan class="caret"></aspan></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="">Computadoras</a></li>
+                        <li class="divider"></li>
+                        <li><a href="">Accesorios</a></li>
+                    </ul>
+                </li>
+            </ul>
+        
+            <div class="navbar-form navbar-left">
+                <form action="" method="post" >
+                    <div class="form-group">
+                        <input class="form-control" type="text" name="search" placeholder="Buscar">
+                    </div>
+                    <button class="btn btn-default"><i class="fa fa-search fa-lg" aria-hidden="true"></i></button>
+                </form>
+            </div>
+            
+            <ul class="nav navbar-nav navbar-right">
+               <li><a ui-sref="app.contact"><i class="fa fa-envelope fa-xs"></i> Contáctanos</a></li>
+                <li class="dropdown">
+                    <a href="" class="dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" role="button"><i class="fa fa-user fa-xs"></i> Usuario <span class="caret"></span></a>
+                    <ul class="dropdown-menu" >
+                        <li><a href=""><i class="fa fa-user fa-xs"></i> Login</a></li>
+                        <li><a href=""><i class="fa fa-user fa-xs"></i> Go out</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
