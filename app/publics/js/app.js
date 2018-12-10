@@ -1,44 +1,31 @@
 'use strict';
-angular.module('newsApp', []);
-
-//
-// angular.module('newsApp', ['ui.router'])
-//     .config(function($stateProvider, $urlRouterProvider) {
-//         $stateProvider
-//             .state('app', {
-//                 url: '/',
-//                 views: {
-//                     'header': {
-//                         templateUrl: 'views/header.html'
-//                     },
-//                     'content': {
-//                         template: '<p>content home</p>'
-//                     },
-//                     'footer': {
-//                         template: '<hr><h2>footer container<small> within content</small></h2>'
-//                     }
-//                 }
-//             })
-//
-//             .state('app.contact', {
-//                 url: 'contact',
-//                 views: {
-//                     'content@': {
-//                         templateUrl: 'views/contact.html',
-//                         controller: 'ContactController'
-//                     }
-//                 }
-//             })
-//
-//             .state('app.about', {
-//                 url: 'about',
-//                 views: {
-//                     'content@': {
-//                         templateUrl: 'views/about.html',
-//                         controller: 'AboutController'
-//                     }
-//                 }
-//             });
-//
-//             $urlRouterProvider.otherwise('/');
-//     });
+angular.module('newsApp', ['ui.router'])
+    .config(function($stateProvider, $urlRouterProvider) {
+        $stateProvider
+            .state('app', {
+                url: '/',
+                views: {
+                    'header': {
+                        templateUrl: 'views/header.html',
+                        controller: 'newsController'
+                    },
+                    'content': {
+                        templateUrl: 'views/content.html',
+                        controller: 'newsController'
+                    },
+                    'footer': {
+                        templateUrl: 'views/footer.html'
+                    }
+                }
+            })
+            .state('app.newDetail', {
+                url: 'newDetail/:id',
+                views: {
+                    'content@': {
+                        templateUrl: 'views/newDetail.html',
+                        controller: 'newsDetailController'
+                    }
+                }
+            });
+            $urlRouterProvider.otherwise('/');
+    });
